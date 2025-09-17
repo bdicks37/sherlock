@@ -2,7 +2,7 @@
 INPUT=`apify actor:get-input | jq -r .usernames[] | xargs echo`
 echo "INPUT: $INPUT"
 
-sherlock $INPUT
+sherlock $INPUT --nsfw
 
 for username in $INPUT; do
   # escape the special meaning leading characters 
